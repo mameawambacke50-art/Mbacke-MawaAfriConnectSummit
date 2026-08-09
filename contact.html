@@ -1,13 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnectSummit-Contact</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?..." rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Inscription - AfriConnect Summit 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=..." rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
- <H1>VOIR</H1>
 <body>
-    <script src="js/main.js"></script>
+
+  <!-- ===================== NAVBAR (identique) ===================== -->
+  <header class="navbar" id="navbar">
+    <nav>
+      <a href="index.html" class="logo">AfriConnect Summit 2026</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="intervenants.html">Intervenants</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Changer de thème">
+        <i class="bi bi-moon-stars"></i>
+      </button>
+      <button id="hamburger" aria-label="Ouvrir le menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO INTERNE ===================== -->
+    <section class="page-hero">
+      <h1>Inscription & Contact</h1>
+      <nav aria-label="Fil d'Ariane" class="breadcrumb">
+        <a href="index.html">Accueil<span>&gt;</span> <span>Contact</span></a> 
+      </nav>
+    </section>
+
+    <!-- ===================== FORMULAIRE + INFOS (2 colonnes) ===================== -->
+    <section class="contact-section fade-in">
+      <div class="contact-flex">
+
+        <!-- Colonne gauche : formulaire -->
+        <form id="registration-form" class="contact-form" novalidate>
+
+          <div class="form-group">
+            <label for="fullname">Nom complet *</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <span class="error-message" id="fullname-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Téléphone *</label>
+            <input type="tel" id="phone" name="phone" required>
+            <span class="error-message" id="phone-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="participation">Type de participation *</label>
+            <select id="participation" name="participation" required>
+              <option value="">-- Choisir --</option>
+              <option value="developpeur">Développeur</option>
+              <option value="entrepreneur">Entrepreneur</option>
+              <option value="investisseur">Investisseur</option>
+              <option value="etudiant">Étudiant</option>
+            </select>
+            <span class="error-message" id="participation-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="country">Pays *</label>
+            <select id="country" name="country" required>
+              <option value="">-- Choisir --</option>
+              <option value="senegal">Sénégal</option>
+              <option value="cote-ivoire">Côte d'Ivoire</option>
+              <option value="cameroun">Cameroun</option>
+              <option value="maroc">Maroc</option>
+              <option value="benin">Bénin</option>
+              <option value="togo">Togo</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="ghana">Ghana</option>
+              <option value="tunisie">Tunisie</option>
+              <option value="mali">Mali</option>
+            </select>
+            <span class="error-message" id="country-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message / Motivation *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message" id="message-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Envoyer mon inscription</button>
+
+          <!-- Message de succès, masqué par défaut en CSS -->
+          <div class="success-message" id="success-message">
+            Inscription envoyée avec succès !
+          </div>
+        </form>
+
+        <!-- Colonne droite : infos pratiques -->
+        <aside class="contact-info">
+          <h2>Informations pratiques</h2>
+          <p><i class="bi bi-geo-alt"></i> Dakar, Sénégal</p>
+          <p><i class="bi bi-calendar-event"></i> 15-17 Octobre 2026</p>
+          <p><i class="bi bi-envelope"></i> contact@africonnectsummit.com</p>
+          <p><i class="bi bi-telephone"></i> +221 XX XXX XX XX</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ACCORDÉON (CSS pur) ===================== -->
+    <section class="faq fade-in">
+      <h2>Questions fréquentes</h2>
+
+      <div class="accordion">
+
+        <div class="accordion-item">
+          <input type="checkbox" id="faq1" class="accordion-toggle">
+          <label for="faq1" class="accordion-header">
+            Comment s'inscrire à la conférence ?
+          </label>
+          <div class="accordion-content">
+            <p>Réponse détaillée ici.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="faq2" class="accordion-toggle">
+          <label for="faq2" class="accordion-header">
+            Quel est le tarif de participation ?
+          </label>
+          <div class="accordion-content">
+            <p>Réponse détaillée ici.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="faq3" class="accordion-toggle">
+          <label for="faq3" class="accordion-header">
+            Y a-t-il un hébergement proposé ?
+          </label>
+          <div class="accordion-content">
+            <p>Réponse détaillée ici.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="faq4" class="accordion-toggle">
+          <label for="faq4" class="accordion-header">
+            Puis-je obtenir un remboursement ?
+          </label>
+          <div class="accordion-content">
+            <p>Réponse détaillée ici.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="checkbox" id="faq5" class="accordion-toggle">
+          <label for="faq5" class="accordion-header">
+            La conférence est-elle traduite en anglais ?
+          </label>
+          <div class="accordion-content">
+            <p>Réponse détaillée ici.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== CARTE GOOGLE MAPS ===================== -->
+    <section class="map-section fade-in">
+      <h2>Nous trouver</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!..."
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localisation d'AfriConnect Summit à Dakar">
+      </iframe>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (identique) ===================== -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>AfriConnect Summit</h4>
+        <p>Connecter l'écosystème africain <br>
+Un espace de rencontre où développeurs, entrepreneurs et investisseurs partagent leurs idées, <br>
+ leurs expériences et leurs ambitions pour l'avenir de l'Afrique.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suivez-nous</h4>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
