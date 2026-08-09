@@ -1,12 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnectSummit-Programme</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?..." rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programme - AfriConnect Summit 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=..." rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="js/main.js"></script>
+
+  <!-- ===================== NAVBAR (identique à index.html) ===================== -->
+  <header class="navbar" id="navbar">
+    <nav>
+      <a href="index.html" class="logo">AfriConnect Summit 2026</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programme.html" class="active">Programme</a></li>
+        <li><a href="intervenants.html">Intervenants</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Changer de thème">
+        <i class="bi bi-moon-stars"></i>
+      </button>
+      <button id="hamburger" aria-label="Ouvrir le menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO INTERNE ===================== -->
+    <section class="page-hero">
+      <h1>Programme</h1>
+      <nav aria-label="Fil d'Ariane" class="breadcrumb">
+        <a href="index.html">Accueil</a> <span>&gt;</span> <span>Programme</span>
+      </nav>
+    </section>
+
+    <!-- ===================== ONGLETS 3 JOURS ===================== -->
+    <section class="schedule fade-in">
+
+      <!-- Boutons d'onglets : chaque bouton cible un data-target -->
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-target="jour1" role="tab" aria-selected="true">Jour 1</button>
+        <button class="tab-btn" data-target="jour2" role="tab" aria-selected="false">Jour 2</button>
+        <button class="tab-btn" data-target="jour3" role="tab" aria-selected="false">Jour 3</button>
+      </div>
+
+      <!-- Contenu Jour 1 (visible par défaut) -->
+      <article class="tab-content active" id="jour1" role="tabpanel">
+        <table class="schedule-table">
+          <caption class="sr-only">Planning du Jour 1</caption>
+          <thead>
+            <tr>
+              <th scope="col">Heure</th>
+              <th scope="col">Session</th>
+              <th scope="col">Intervenant</th>
+              <th scope="col">Salle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09h00</td>
+              <td>Ouverture officielle</td>
+              <td>Nom Prénom</td>
+              <td>Salle A</td>
+            </tr>
+            <tr>
+              <td>10h00</td>
+              <td>Titre de la session</td>
+              <td>Nom Prénom</td>
+              <td>Salle B</td>
+            </tr>
+            <tr>
+              <td>11h30</td>
+              <td>Titre de la session</td>
+              <td>Nom Prénom</td>
+              <td>Salle A</td>
+            </tr>
+            <tr>
+              <td>14h00</td>
+              <td>Titre de la session</td>
+              <td>Nom Prénom</td>
+              <td>Salle C</td>
+            </tr>
+            <tr>
+              <td>16h00</td>
+              <td>Clôture de la journée</td>
+              <td>Nom Prénom</td>
+              <td>Salle A</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Contenu Jour 2 (masqué par défaut via CSS) -->
+      <article class="tab-content" id="jour2" role="tabpanel">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th scope="col">Heure</th>
+              <th scope="col">Session</th>
+              <th scope="col">Intervenant</th>
+              <th scope="col">Salle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>09h00</td><td>Session A</td><td>Nom Prénom</td><td>Salle A</td></tr>
+            <tr><td>10h30</td><td>Session B</td><td>Nom Prénom</td><td>Salle B</td></tr>
+            <tr><td>12h00</td><td>Session C</td><td>Nom Prénom</td><td>Salle A</td></tr>
+            <tr><td>14h30</td><td>Session D</td><td>Nom Prénom</td><td>Salle C</td></tr>
+            <tr><td>16h30</td><td>Session E</td><td>Nom Prénom</td><td>Salle A</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- Contenu Jour 3 (masqué par défaut via CSS) -->
+      <article class="tab-content" id="jour3" role="tabpanel">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th scope="col">Heure</th>
+              <th scope="col">Session</th>
+              <th scope="col">Intervenant</th>
+              <th scope="col">Salle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>09h00</td><td>Session A</td><td>Nom Prénom</td><td>Salle A</td></tr>
+            <tr><td>10h30</td><td>Session B</td><td>Nom Prénom</td><td>Salle B</td></tr>
+            <tr><td>12h00</td><td>Session C</td><td>Nom Prénom</td><td>Salle A</td></tr>
+            <tr><td>14h30</td><td>Session D</td><td>Nom Prénom</td><td>Salle C</td></tr>
+            <tr><td>16h30</td><td>Clôture du sommet</td><td>Nom Prénom</td><td>Salle A</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+    </section>
+
+    <!-- ===================== THÉMATIQUES (Grid 2x2) ===================== -->
+    <section class="themes fade-in">
+      <h2>Thématiques abordées</h2>
+      <div class="themes-grid">
+        <article class="theme-card">
+          <i class="bi bi-cpu"></i>
+          <h3>IA & Tech</h3>
+          <p>Explorez l'innovation technologique <br>
+Découvrez les avancées en intelligence artificielle,<br>
+ développement web et nouvelles technologies qui transforment notre quotidien.</p>
+        </article>
+        <article class="theme-card">
+          <i class="bi bi-graph-up-arrow"></i>
+          <h3>Business</h3>
+          <p>Entrepreneuriat et croissance <br>
+Échangez autour de l'entrepreneuriat, des startups, du financement et des stratégies <br>
+ pour développer des projets innovants.</p>
+        </article>
+        <article class="theme-card">
+          <i class="bi bi-palette"></i>
+          <h3>Design</h3>
+          <p>Créer des expériences numériques <br>
+Découvrez l'UI/UX, le design graphique et les nouvelles tendances pour concevoir <br>
+ des expériences numériques modernes, accessibles et intuitives.</p>
+        </article>
+        <article class="theme-card">
+          <i class="bi bi-bar-chart"></i>
+          <h3>Data</h3>
+          <p>La puissance des données <br>
+Découvrez comment les données permettent d'améliorer les décisions,<br>
+ d'anticiper les tendances et de créer de nouvelles opportunités.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (identique à index.html) ===================== -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>AfriConnect Summit</h4>
+        <p>Connecter l'écosystème africain <br>
+Un espace de rencontre où développeurs, entrepreneurs et investisseurs partagent leurs idées, <br>
+ leurs expériences et leurs ambitions pour l'avenir de l'Afrique.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suivez-nous</h4>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
