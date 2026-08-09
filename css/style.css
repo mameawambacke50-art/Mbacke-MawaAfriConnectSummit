@@ -1,14 +1,15 @@
-/* ============================================
-   VARIABLES CSS - :root
-   ============================================ */
+
+   /* VARIABLES CSS -  */
 :root {
   /* Couleurs (mode clair) */
-  --color-bg: #ffffff;
-  --color-bg-alt: #f5f5f7;
-  --color-text: #111111;
-  --color-text-muted: #555555;
-  --color-primary: #ff6b35;
+  --color-bg: #46a3bd;
+  --color-bg-alt: #3415a578;
+  --color-text: #fbf5f5;
+  --color-text-muted: #7070a5;
+  --color-primary: #27f6f6;
   --color-secondary: #1a1a2e;
+
+  
 
   /* Typographie */
   --font-heading: 'Space Grotesk', sans-serif;
@@ -25,7 +26,11 @@
   --shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Mode sombre : on ne redéfinit QUE les variables qui changent */
+#bt{
+    color: #0d0d0f;
+}
+
+/* Mode sombre :  */
 [data-theme="dark"] {
   --color-bg: #0d0d0f;
   --color-bg-alt: #1a1a1e;
@@ -34,9 +39,9 @@
   --shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* ============================================
-   RESET
-   ============================================ */
+
+   /* RESET */
+   
 * {
   margin: 0;
   padding: 0;
@@ -77,9 +82,9 @@ button {
   font-family: inherit;
 }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
+
+   /* NAVBAR */
+  
 .navbar {
   position: fixed;
   top: 0;
@@ -90,7 +95,7 @@ button {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Classe ajoutée en JS après 80px de scroll */
+
 .navbar.scrolled {
   background: var(--color-bg);
   box-shadow: var(--shadow);
@@ -134,9 +139,9 @@ button {
   display: none; /* visible seulement en media query mobile */
 }
 
-/* ============================================
-   HERO (page d'accueil)
-   ============================================ */
+
+   /* HERO (page d'accueil) */
+  
 .hero {
   min-height: 100vh;
   display: flex;
@@ -144,6 +149,9 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, .5),
+            rgba(0, 0, 0, .5)),
+        url('../images/img1-1.jpg');
   padding: var(--spacing-lg);
   gap: var(--spacing-md);
 }
@@ -215,9 +223,8 @@ button {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================================
-   ANIMATIONS AU SCROLL (IntersectionObserver)
-   ============================================ */
+
+   /* ANIMATIONS AU SCROLL  */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -229,9 +236,8 @@ button {
   transform: translateY(0);
 }
 
-/* ============================================
-   CHIFFRES CLÉS (Grid)
-   ============================================ */
+
+   /* CHIFFRES CLÉS  */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -247,9 +253,8 @@ button {
   font-family: var(--font-heading);
 }
 
-/* ============================================
-   POURQUOI PARTICIPER (Flexbox)
-   ============================================ */
+
+   /* POURQUOI PARTICIPER  */
 .why-flex {
   display: flex;
   gap: var(--spacing-lg);
@@ -271,9 +276,8 @@ button {
   margin-bottom: var(--spacing-sm);
 }
 
-/* ============================================
-   INTERVENANTS (Grid + hover)
-   ============================================ */
+
+   /* INTERVENANTS  */
 .speakers-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -315,9 +319,9 @@ button {
   font-size: 0.9rem;
 }
 
-/* ============================================
-   SPONSORS (Flexbox, 3 tailles)
-   ============================================ */
+
+   /* SPONSORS */
+  
 .sponsors-flex {
   display: flex;
   align-items: center;
@@ -326,14 +330,17 @@ button {
   padding: var(--spacing-xl) var(--spacing-lg);
   flex-wrap: wrap;
 }
+#sp{
+    text-align: center;
+}
 
-.sponsor-gold img { width: 160px; }
-.sponsor-silver img { width: 120px; }
-.sponsor-bronze img { width: 90px; }
+.sponsor-gold img { width: 170px; }
+.sponsor-silver img { width: 80px; }
+.sponsor-bronze img { width: 70px; }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
+   /* FOOTER */
+   
 footer {
   background: var(--color-bg-alt);
   padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-md);
@@ -375,7 +382,7 @@ footer p {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  display: none; /* affiché en JS après 300px de scroll */
+  display: none; 
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease;
@@ -385,9 +392,9 @@ footer p {
   transform: translateY(-4px);
 }
 
-/* ============================================
-   PAGES INTERNES - Hero + Fil d'Ariane
-   ============================================ */
+
+   /* PAGES INTERNES  */
+   
 .page-hero {
   padding: 10rem var(--spacing-lg) var(--spacing-lg);
   background: var(--color-bg-alt);
@@ -404,9 +411,9 @@ footer p {
   color: var(--color-primary);
 }
 
-/* ============================================
-   PROGRAMME - Onglets
-   ============================================ */
+
+   /* PROGRAMME - Onglets */
+   
 .tabs {
   display: flex;
   justify-content: center;
@@ -427,7 +434,7 @@ footer p {
   color: #fff;
 }
 
-/* Masqué par défaut, le JS ajoute .active pour afficher */
+
 .tab-content {
   display: none;
   padding: 0 var(--spacing-lg) var(--spacing-xl);
@@ -458,7 +465,7 @@ footer p {
   background: var(--color-bg-alt);
 }
 
-/* Thématiques - Grid 2x2 */
+/* /* Thématiques - */
 .themes-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -477,9 +484,9 @@ footer p {
   color: var(--color-primary);
 }
 
-/* ============================================
-   INTERVENANTS - Filtres
-   ============================================ */
+
+   /* INTERVENANTS - Filtres */
+   
 .filters {
   display: flex;
   justify-content: center;
@@ -500,9 +507,9 @@ footer p {
   color: #fff;
 }
 
-/* ============================================
-   CONTACT - Formulaire 2 colonnes
-   ============================================ */
+
+   /* CONTACT - Formulaire 2 colonnes */
+   
 .contact-flex {
   display: flex;
   gap: var(--spacing-xl);
@@ -549,7 +556,6 @@ footer p {
   border-color: var(--color-primary);
 }
 
-/* Classes ajoutées dynamiquement par le JS de validation */
 .form-group input.error,
 .form-group select.error,
 .form-group textarea.error {
@@ -569,7 +575,7 @@ footer p {
 }
 
 .success-message {
-  display: none; /* le JS passe en display:block après soumission valide */
+  display: none; 
   background: #2a9d8f;
   color: #fff;
   padding: var(--spacing-md);
@@ -581,14 +587,14 @@ footer p {
   display: block;
 }
 
-/* ============================================
-   FAQ - Accordéon CSS pur
-   ============================================ */
+/* 
+   FAQ -  */
+
 .accordion-item {
   border-bottom: 1px solid var(--color-bg-alt);
 }
 
-/* La case à cocher est cachée, mais reste fonctionnelle */
+
 .accordion-toggle {
   display: none;
 }
@@ -624,9 +630,9 @@ footer p {
   padding-bottom: var(--spacing-md);
 }
 
-/* ============================================
-   CARTE
-   ============================================ */
+
+   /* CARTE */
+   
 .map-section {
   padding: var(--spacing-xl) var(--spacing-lg);
 }
@@ -635,9 +641,9 @@ footer p {
   border-radius: var(--radius);
 }
 
-/* ============================================
-   RESPONSIVE - MEDIA QUERIES
-   ============================================ */
+
+   /* RESPONSIVE - MEDIA QUERIES
+  */
 
 /* Tablette : 768px */
 @media (max-width: 768px) {
