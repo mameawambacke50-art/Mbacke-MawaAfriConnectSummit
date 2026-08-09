@@ -1,12 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriConnectSummit-Accuiel</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?..." rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriConnect Summit 2026</title>
+
+  <!-- Google Fonts : une expressive (titres) + une lisible (corps) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=..." rel="stylesheet">
+
+  <!-- Icônes -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> -->
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="js/main.js"></script>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav>
+      <a href="index.html" class="logo">AfriConnect Summit 2026</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="intervenants.html">Intervenants</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="theme-toggle" aria-label="Changer de thème">
+        <i class="bi bi-moon-stars"></i>
+      </button>
+
+      <button id="hamburger" aria-label="Ouvrir le menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <h1>L'Afrique innove, l'Afrique se connect, l'Afrique avance</h1>
+      <p>Dakar,Senegal -14-15 avril 2027</p>
+
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">S'inscrire</a>
+        <a href="programme.html" class="btn btn-secondary">Voir le programme</a>
+      </div>
+
+      <!-- Compte à rebours -->
+      <div class="countdown" id="countdown">
+        <div><span id="days">00</span><small>Jours</small></div>
+        <div><span id="hours">00</span><small>Heures</small></div>
+        <div><span id="minutes">00</span><small>Minutes</small></div>
+        <div><span id="seconds">00</span><small>Secondes</small></div>
+      </div>
+    </section>
+
+    <!-- ===================== CHIFFRES CLÉS ===================== -->
+    <section class="stats fade-in" aria-label="Chiffres clés">
+      <div class="stats-grid">
+        <article class="stat-item">
+          <span class="stat-number" data-target="1200">0</span>
+          <p>Participants</p>
+        </article>
+        <article class="stat-item">
+          <span class="stat-number" data-target="48">0</span>
+          <p>Intervenants</p>
+        </article>
+        <article class="stat-item">
+          <span class="stat-number" data-target="3">0</span>
+          <p>Jours</p>
+        </article>
+        <article class="stat-item">
+          <span class="stat-number" data-target="12">0</span>
+          <p>Pays</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== POURQUOI PARTICIPER ===================== -->
+    <section class="why fade-in">
+      <h2>Pourquoi participer ?</h2>
+      <div class="why-flex">
+        <article class="why-item">
+          <i class="bi bi-lightbulb"></i>
+          <h3>1- Innovation</h3>
+          <p>Découvrez les nouvelles technologies
+Explorez les tendances technologiques <br>
+et découvrez les idées qui façonnent l'avenir numérique de l'Afrique.</p>
+        </article>
+        <article class="why-item">
+          <i class="bi bi-people"></i>
+          <h3>Networking</h3>
+          <p>Créez des connexions
+Rencontrez des développeurs, entrepreneurs et investisseurs <br>
+ et échangez avec des professionnels venus de différents pays.</p>
+        </article>
+        <article class="why-item">
+          <i class="bi bi-globe"></i>
+          <h3>Opportunites</h3>
+          <p>Développez vos opportunités
+Découvrez de nouveaux projets, partagez vos idées <br>
+et trouvez des possibilités de collaboration et de développement professionnel.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== INTERVENANTS VEDETTES ===================== -->
+    <section class="speakers-preview fade-in">
+      <h2>Intervenants vedettes</h2>
+      <div class="speakers-grid">
+        <article class="speaker-card">
+          <img src="images/speaker1.jpg" alt="Photo de [Nom], [titre]">
+          <h3>Khadija cisse</h3>
+          <p>Titre / poste</p>
+          <span>Pays</span>
+        </article>
+        <!-- répéter pour 4 intervenants -->
+      </div>
+      <a href="intervenants.html" class="btn btn-primary">Voir tous les intervenants</a>
+    </section>
+
+    <!-- ===================== SPONSORS ===================== -->
+    <section class="sponsors fade-in">
+      <h2>Nos sponsors</h2>
+      <div class="sponsors-flex">
+        <div class="sponsor-tier sponsor-gold">
+          <img src="images/sponsor-or.png" alt="Logo sponsor Or">
+        </div>
+        <div class="sponsor-tier sponsor-silver">
+          <img src="images/sponsor-argent.png" alt="Logo sponsor Argent">
+        </div>
+        <div class="sponsor-tier sponsor-bronze">
+          <img src="images/sponsor-bronze.png" alt="Logo sponsor Bronze">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>AfriConnect Summit</h4>
+        <p>Connecter l'écosystème africain <br>
+Un espace de rencontre où développeurs, entrepreneurs et investisseurs partagent leurs idées, <br>
+ leurs expériences et leurs ambitions pour l'avenir de l'Afrique.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Liens</h4>
+        <ul>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="intervenants.html">Intervenants</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Suivez-nous</h4>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <p>&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+  </footer>
+
+  <button id="back-to-top" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
